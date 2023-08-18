@@ -3,6 +3,7 @@
 /**
  * print_number - Prints an integer using _putchar
  * @n: The integer to be printed
+ * Return: void
  */
 void print_number(int n)
 {

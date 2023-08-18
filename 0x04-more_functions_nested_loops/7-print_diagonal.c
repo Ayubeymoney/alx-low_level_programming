@@ -7,6 +7,7 @@
 void print_diagonal(int n)
 {
 	int spaces = 0;
+	int i;
 
 	if (n <= 0)
 	{
@@ -17,7 +18,7 @@ void print_diagonal(int n)
 	while (n > 0)
 	{
 		/* Print leading spaces */
-		for (int i = 0; i < spaces; i++)
+		for (i = 0; i < spaces; i++)
 			_putchar(' ');
 
 		_putchar('\\'); /* Print the \ character */

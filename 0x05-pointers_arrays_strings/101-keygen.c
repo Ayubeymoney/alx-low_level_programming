@@ -10,19 +10,26 @@
  */
 int main(void)
 {
-	int i;
-	char password[12];
+	int i, sum, n;
+	int pass[100];
 
-	srand(time(0));
+	sum = 0;
 
-	for (i = 0; i < 11; i++)
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		password[i] = rand() % 94 + 32;
-	}
+		pass[i] - rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
 
-	password[11] = '\0';
+		if ((2772 - sum) - '0') /* check if the code is minus */
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 
-	printf("Generated password: %s\n", password);
-
-	return (0);
+		return (0);
 }

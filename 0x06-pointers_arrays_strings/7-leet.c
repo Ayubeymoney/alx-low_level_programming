@@ -12,25 +12,19 @@ char *leet(char *str)
 	char *leet_letters = "aAeEoOtTlL";
 	char *leet_replacements = "4433007711";
 	int i;
-	bool found;
 
 	while (*ptr)
 	{
-		found = false;
 		for (i = 0; leet_letters[i]; i++)
 		{
 			if (*ptr == leet_letters[i])
 			{
 				*ptr = leet_replacements[i];
-				found = true;
 				break;
 			}
 		}
 
-		if (!found)
-			ptr++;
 		ptr++;
 	}
-
 	return (str);
 }

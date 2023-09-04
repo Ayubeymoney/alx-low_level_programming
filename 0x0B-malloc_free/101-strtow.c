@@ -63,24 +63,20 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-
 	if (num_words == 0)
 		return (NULL);
-
 	if (words == NULL)
 		return (NULL);
-
 	while (*str)
 	{
 		while (*str && is_separator(*str, separators))
 			str++;
-
 		if (*str)
 		{
 			char *end = str;
+
 			while (*end && !is_separator(*end, separators))
 				end++;
-
 			words[i] = (char *)malloc((end - str + 1) * sizeof(char));
 			if (words[i] == NULL)
 			{
@@ -93,11 +89,9 @@ char **strtow(char *str)
 			strncpy(words[i], str, end - str);
 			words[i][end - str] = '\0';
 			i++;
-
 			str = end;
 		}
 	}
-
 	words[i] = NULL;
 	return (words);
 }

@@ -4,12 +4,11 @@
 #include "dog.h"
 
 /**
- * initializeDog - Initializes a struct dog variable.
+ * init_dog - Initializes a struct dog variable.
+ * @d: Pointer to the struct dog variable to initialize.
  * @name: Pointer to the name of the dog.
  * @age: The age of the dog.
  * @owner: Pointer to the owner's name.
- *
- * Return: The initialized struct dog variable.
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
@@ -20,7 +19,8 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 	d->name = strdup(name);
 
-	if (d->name == NULL) {
+	if (d->name == NULL)
+	{
 		perror("Memory allocation failed");
 		exit(1);
 	}

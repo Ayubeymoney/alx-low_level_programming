@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - Prints the name of the compiled file
+ * main - Entry point of the program
  *
- * Return: Always 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	printf(" %s\n", __FILE__);
+	printf("The name of the current file is: %s\n", __FILE__);
 	return (0);
 }
